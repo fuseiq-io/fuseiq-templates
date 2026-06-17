@@ -8,7 +8,7 @@ agents powered by `fuseiq-agent`.
 
 | Example | Description |
 |---|---|
-| [Twitter Sentiment Analyzer](./examples/twitter-sentiment-analyzer) | Analyzes mock tweet data and reports sentiment scores to your FuseIQ dashboard |
+| [Twitter Sentiment Analyzer](./examples/twitter-sentiment-analyzer) | Analyzes mock or packetized tweet data and reports sentiment scores to your FuseIQ dashboard |
 | [News Summarizer](./examples/news-summarizer) | Fetches live RSS feeds and generates summaries with progress reporting |
 | [Discord Support Bot](./examples/discord-support-bot) | A Discord bot that echoes messages and reports status to FuseIQ |
 
