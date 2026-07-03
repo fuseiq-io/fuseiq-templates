@@ -1,8 +1,13 @@
-# fuseiq-templates
+# FuseIQ Templates — Ready-to-run AI agents
+
+[![FuseIQ](https://img.shields.io/badge/FuseIQ-Outcome_OS-00D4FF?style=for-the-badge)](https://fuseiq.io)
+[![Agent SDK](https://img.shields.io/badge/Agent_SDK-181717?style=for-the-badge&logo=github)](https://github.com/abbasi8586/fuseiq-agent-sdk)
 
 Ready-to-run example agents for the [FuseIQ](https://fuseiq.io) platform.
 Each example demonstrates a real-world pattern for building and reporting
-agents powered by `fuseiq-agent`.
+agents powered by [fuseiq-agent-sdk](https://github.com/abbasi8586/fuseiq-agent-sdk).
+
+> **New in v2.2.6:** Browse governed **Blueprints & Playbooks** in the hosted [Library](https://fuseiq.io/blueprints) — one-click Swarm deploy without starting from scratch.
 
 ## Example Gallery
 
@@ -19,7 +24,7 @@ agents powered by `fuseiq-agent`.
 pip install fuseiq-agent
 
 # 2. Clone this repo
-git clone https://github.com/fuseiq/fuseiq-templates.git
+git clone https://github.com/abbasi8586/fuseiq-templates.git
 cd fuseiq-templates
 
 # 3. Pick an example and run it
@@ -30,16 +35,25 @@ python agent.py
 Each example's directory has its own `README.md` with detailed setup and
 a copy-paste run command.
 
+## Ecosystem
+
+| Repo | Purpose |
+|------|---------|
+| [fuseiq-agent-sdk](https://github.com/abbasi8586/fuseiq-agent-sdk) | Python + Node SDK |
+| **fuseiq-templates** (this repo) | Example agents |
+| [fuseiq-cli](https://github.com/abbasi8586/fuseiq-cli) | Terminal tooling |
+
 ## Requirements
 
 - Python 3.9+
 - `fuseiq-agent` SDK (`pip install fuseiq-agent`)
-- A FuseIQ account (free) at [https://fuseiq.io](https://fuseiq.io)
+- A FuseIQ account (free) at [https://fuseiq.io/signup](https://fuseiq.io/signup)
 
 ## Need Help?
 
 - Full documentation: [https://fuseiq.io/docs](https://fuseiq.io/docs)
-- Community & support: [https://fuseiq.io](https://fuseiq.io)
+- Help center: [https://fuseiq.io/help](https://fuseiq.io/help)
+- Community Discord: [https://discord.gg/pDFgmqkf](https://discord.gg/pDFgmqkf)
 
 ---
 
