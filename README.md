@@ -1,11 +1,13 @@
 # FuseIQ Templates — Ready-to-run AI agents
 
 [![FuseIQ](https://img.shields.io/badge/FuseIQ-Outcome_OS-00D4FF?style=for-the-badge)](https://fuseiq.io)
-[![Agent SDK](https://img.shields.io/badge/Agent_SDK-181717?style=for-the-badge&logo=github)](https://github.com/abbasi8586/fuseiq-agent-sdk)
+[![Agent SDK](https://img.shields.io/badge/Agent_SDK-181717?style=for-the-badge&logo=github)](https://github.com/fuseiq-io/fuseiq-agent-sdk)
 
 Ready-to-run example agents for the [FuseIQ](https://fuseiq.io) platform.
 Each example demonstrates a real-world pattern for building and reporting
-agents powered by [fuseiq-agent-sdk](https://github.com/abbasi8586/fuseiq-agent-sdk).
+agents powered by [fuseiq-agent-sdk](https://github.com/fuseiq-io/fuseiq-agent-sdk).
+
+> ⭐ **Star + fork** — submit your template as a PR (HITL + Eval patterns preferred). Pre-launch platform access: [fuseiq.io/signup](https://fuseiq.io/signup) · code **FUSEIQ1M**
 
 > **New in v2.2.6:** Browse governed **Blueprints & Playbooks** in the hosted [Library](https://fuseiq.io/blueprints) — one-click Swarm deploy without starting from scratch.
 
@@ -24,7 +26,7 @@ agents powered by [fuseiq-agent-sdk](https://github.com/abbasi8586/fuseiq-agent-
 pip install fuseiq-agent
 
 # 2. Clone this repo
-git clone https://github.com/abbasi8586/fuseiq-templates.git
+git clone https://github.com/fuseiq-io/fuseiq-templates.git
 cd fuseiq-templates
 
 # 3. Pick an example and run it
@@ -39,9 +41,9 @@ a copy-paste run command.
 
 | Repo | Purpose |
 |------|---------|
-| [fuseiq-agent-sdk](https://github.com/abbasi8586/fuseiq-agent-sdk) | Python + Node SDK |
+| [fuseiq-agent-sdk](https://github.com/fuseiq-io/fuseiq-agent-sdk) | Python + Node SDK |
 | **fuseiq-templates** (this repo) | Example agents |
-| [fuseiq-cli](https://github.com/abbasi8586/fuseiq-cli) | Terminal tooling |
+| [fuseiq-cli](https://github.com/fuseiq-io/fuseiq-cli) | Terminal tooling |
 
 ## Requirements
 
