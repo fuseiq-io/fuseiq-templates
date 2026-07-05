@@ -1,33 +1,44 @@
 # Contributing to fuseiq-templates
 
-Thank you for your interest in contributing! We welcome community
-contributions to make fuseiq-templates better.
+MIT edges on GitHub · governed platform hosted at fuseiq.io · Discord is where builders rise together
 
-## How to Contribute
+## Ways to contribute
 
-1. Fork the repository.
-2. Create a feature branch: `git checkout -b feat/my-feature`
-3. Add or improve a template example under `examples/`.
-4. Make sure your example has its own `README.md` and is self-contained
-   (no hardcoded API keys, no real credentials).
-5. Run the example to verify it works end-to-end.
-6. Submit a Pull Request.
+- sector playbooks
+- example agents
+- README walkthroughs
+- **Star the repo** — raises visibility and unlocks OSS release priority
+- **Improve docs** — typos, walkthroughs, safety notes
 
-## Guidelines
+## Safety first
 
-- Each example must have a clear one-line description in its `README.md`.
-- Do not commit real tokens, secrets, or `.env` files.
-- Use mock data or free/public APIs whenever possible.
-- If a real API key is required, document it clearly in the example's
-  `README.md` and use an environment variable.
-- Format Python code with `ruff` or `black` before submitting.
-- Keep examples concise — under 200 lines unless absolutely necessary.
+- ✅ Star and fork MIT repos: fuseiq-agent-sdk, fuseiq-cli, fuseiq-templates
+- ✅ Open PRs with examples, docs, tests, and adapter modules
+- ✅ Report SDK/CLI bugs via GitHub issues with repro steps
+- ✅ Report platform security issues to hello@fuseiq.io (not public issues)
 
-## Code of Conduct
+- ❌ Never commit live API keys, .env files, or customer workspace exports
+- ❌ Do not PR against the private platform monorepo (invite-only)
+- ❌ Do not attempt to access other users' workspaces or bypass auth
 
-Be respectful and constructive. We're all here to learn and build cool
-things with FuseIQ.
+## Pull request process
+
+1. Fork **fuseiq-io/fuseiq-templates** (sync `main` from upstream first)
+2. Branch: `feature/short-description`
+3. Keep changes scoped — no secrets, no platform monorepo files
+4. Test with your own FuseIQ API key from [fuseiq.io/signup](https://fuseiq.io/signup)
+5. Open PR with clear description + link to Discord thread if you paired in #builders-lounge
+
+## Community ladder
+
+1. **⭐ Star fuseiq-agent-sdk** — Release notifications · helps builders discover governed agent tooling
+2. **Run Quick Start on fuseiq.io** — Provable Outcome Card in ~60s · FUSEIQ1M for 1 month Pro
+3. **Fork + open a PR** — Contributor badge · good-first-issue queue · changelog credit
+4. **Showcase in Discord** — Community Hero path · feedback from core team · partner intros
+5. **Refer a founding partner** — Badge on fuseiq.io/partners · co-marketing slot
 
 ## Questions?
 
-Open an issue or join our community at https://fuseiq.io
+- [Discord #builders-lounge](https://discord.gg/pDFgmqkf)
+- [Good first issues](https://github.com/fuseiq-io/fuseiq-agent-sdk/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
+- hello@fuseiq.io
