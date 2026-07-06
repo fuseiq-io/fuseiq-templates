@@ -7,7 +7,7 @@ Ready-to-run example agents for the [FuseIQ](https://fuseiq.io) platform.
 Each example demonstrates a real-world pattern for building and reporting
 agents powered by [fuseiq-agent-sdk](https://github.com/fuseiq-io/fuseiq-agent-sdk).
 
-> ⭐ **Star + fork** — submit your template as a PR (HITL + Eval patterns preferred). Pre-launch platform access: [fuseiq.io/signup](https://fuseiq.io/signup) · code **FUSEIQ1M**
+> ⭐ **Star + fork** — submit your template as a PR (HITL + Eval patterns preferred). [fuseiq.io/signup](https://fuseiq.io/signup) — 3-day Pro trial · Discord community perks in **#resources**
 
 > **New in v2.2.6:** Browse governed **Blueprints & Playbooks** in the hosted [Library](https://fuseiq.io/blueprints) — one-click Swarm deploy without starting from scratch.
 
