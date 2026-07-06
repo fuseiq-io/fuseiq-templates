@@ -7,8 +7,12 @@ Analyzes a hardcoded set of mock tweets and reports sentiment scores
 No real Twitter API key needed — everything runs locally with sample data.
 """
 
+import json
+import os
 import random
 import time
+from pathlib import Path
+
 from fuseiq_agent import Agent, log_step, report_metric
 
 # --- Mock sentiment engine ---
@@ -20,6 +24,39 @@ MOCK_TWEETS = [
     {"id": 4, "text": "Best purchase I've made all year!", "user": "@diana"},
     {"id": 5, "text": "Worst experience ever. Avoid at all costs.", "user": "@eve"},
 ]
+
+
+def load_tweets():
+    """Load optional source-packet.json data or fall back to mock tweets."""
+    packet_path = Path(os.environ.get("TWEET_SOURCE_PACKET", "source-packet.json"))
+    if not packet_path.exists():
+        return MOCK_TWEETS
+
+    with packet_path.open(encoding="utf-8") as packet_file:
+        source_packet = json.load(packet_file)
+
+    if not isinstance(source_packet, list):
+        raise ValueError("Source packet must be a list of tweet objects.")
+
+    tweets = []
+    for index, item in enumerate(source_packet, start=1):
+        if not isinstance(item, dict):
+            raise ValueError(f"Tweet {index} must be an object.")
+
+        text = item.get("text")
+        if not isinstance(text, str) or not text.strip():
+            raise ValueError(f"Tweet {index} needs non-empty text.")
+
+        user = item.get("user")
+        if not isinstance(user, str) or not user.strip():
+            user = "@source"
+
+        tweets.append({"id": index, "text": text, "user": user})
+
+    if not tweets:
+        raise ValueError("Source packet must include at least one tweet.")
+
+    return tweets
 
 
 def analyze_sentiment(text):
@@ -45,6 +82,7 @@ def analyze_sentiment(text):
 
 def main():
     agent = Agent(name="twitter-sentiment-analyzer")
+    tweets = load_tweets()
 
     log_step(agent, "Starting tweet analysis pipeline")
 
@@ -52,7 +90,7 @@ def main():
     positive_count = 0
     negative_count = 0
 
-    for tweet in MOCK_TWEETS:
+    for tweet in tweets:
         log_step(agent, f"Analyzing tweet {tweet['id']} from {tweet['user']}")
 
         polarity, confidence, label = analyze_sentiment(tweet["text"])
@@ -70,14 +108,14 @@ def main():
         # Simulate processing time
         time.sleep(0.5)
 
-    avg_polarity = total_polarity / len(MOCK_TWEETS)
+    avg_polarity = total_polarity / len(tweets)
     report_metric(agent, "avg_polarity", avg_polarity)
     report_metric(agent, "positive_count", positive_count)
     report_metric(agent, "negative_count", negative_count)
 
     log_step(
         agent,
-        f"Done! Analyzed {len(MOCK_TWEETS)} tweets. "
+        f"Done! Analyzed {len(tweets)} tweets. "
         f"Positive: {positive_count}, Negative: {negative_count}, "
         f"Average polarity: {avg_polarity:.2f}",
     )
